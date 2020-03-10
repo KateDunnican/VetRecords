@@ -1,6 +1,6 @@
-.container-fluid{
+.folderdiv{
     width: 100vw;
     height: 100vh;
     background-color: rgba(250, 225, 188, 1);
-    border: 1px black solid;
+    /*border: 1px black solid;*/
 }
