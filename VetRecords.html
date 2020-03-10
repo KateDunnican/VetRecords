@@ -3,54 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Vet Records Project</title>
-<!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<!-- MY CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- MY CSS -->
     <link rel="stylesheet" href="VetRecords.css">
 </head>
-<body>
+<body id="custom">
 <!-- MY HTML -->
-    <!-- Jumbotron -->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">More stuff</p>
-        </div>
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">More stuff</p>
     </div>
-    <!-- Rest of body -->
-    <div class="container-fluid">
-        <!-- Site info -->
-        <div class="row">
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-9 folderdiv">
-            </div>
-            <div class="col-md-1 tab">
-                <button class="tablinks" onclick="openCity(event, 'London')">Your Pets</button>
-                <button class="tablinks" onclick="openCity(event, 'Paris')">New Pet</button>
-                <button class="tablinks" onclick="openCity(event, 'Tokyo')">General</button>
-            </div>
-            <div class="col-md-1">
-            </div>
-        </div>
-        <!-- Your Pets -->
-        <div class="row">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-            </div>
-        </div>
-        <!-- New Pet -->
-        <div class="row">
-            <div class="col-md-6">
-            </div>
-            <div class="col-md-6">
-            </div>
-        </div>
-    </div>
+</div>
+<!-- Rest of body -->
+<div class="container-fluid">
+    <!-- Site info -->
+    <div class="row">
+        <!-- Buffer div -->
+        <div class="col-md-1"></div>
+        <!-- Main folder div-->
+        <div class="col-md-9 folderdiv">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    Your Pets
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    Is your new pet a dog or a cat? <br>
+                    <input type="radio" id="dog" name="gender" value="male">
+                    <label for="dog">Dog</label><br>
+                    <input type="radio" id="cat" name="gender" value="female">
+                    <label for="cat">Cat</label><br>
 
+                    <label for="nameinput">What's your new pet's name?</label>
+                    <input type="text" id="nameinput"><br>
+
+                    Is your new pet male or female?<br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+
+
+
+
+
+
+
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    General
+                </div>
+            </div>
+        </div>
+        <!-- Tabs div -->
+        <div class="col-md-1" id="tabsdiv">
+            <nav>
+                <div class="nav nav-tabs flex-column" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                       aria-controls="nav-home" aria-selected="false">
+                        Your Pets
+                    </a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                       aria-controls="nav-profile" aria-selected="false">
+                        New Pets
+                    </a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                       aria-controls="nav-contact" aria-selected="false">
+                        General
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- Buffer div -->
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>
+
+<!--Boostrap JS/jQ-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 <!--MY JS/jQ-->
 <script src="js/jquery-2.2.4.js"></script>
 <script src="js/VetRecords.js"></script>

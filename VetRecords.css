@@ -2,5 +2,41 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(250, 225, 188, 1);
-    /*border: 1px black solid;*/
+    border: 1px solid rgba(237, 210, 172, 1);
+    padding: 0;
+}
+.nav{
+    border-bottom: 0;
+}
+.nav-tabs{
+    display: flex;
+    flex-direction: column;
+}
+#custom .nav-link{
+    border-radius: 0 10% 10% 0;
+}
+#custom .nav-item{
+    background-color: rgba(250, 225, 188, 1);
+    height: 110px;
+    width: 50px;
+    display: flex;
+    align-content: center;
+    border: 1px solid rgba(237, 210, 172, 1);
+}
+a{
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: black;
+    justify-content: center;
+
+}
+.tab-pane{
+    margin: 20px;
+    background-color: rgba(255, 255, 248, 1);
+    height: 95vh;
+}
+#tabsdiv{
+    padding-left: 0;
 }
