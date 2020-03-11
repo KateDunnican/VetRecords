@@ -1,6 +1,11 @@
+body{
+    background-image: url("images/desk.jpg");
+    /*background-color: #8C7051;*/
+}
 .folderdiv{
     width: 100vw;
     height: 100vh;
+    background-image: url("images/asfalt-light.png");
     background-color: rgba(250, 225, 188, 1);
     border: 1px solid rgba(237, 210, 172, 1);
     padding: 0;
@@ -35,6 +40,7 @@ a{
 .tab-pane{
     margin: 20px;
     background-color: rgba(255, 255, 248, 1);
+    background-image: url("images/asfalt-light.png");
     height: 95vh;
 }
 #tabsdiv{
