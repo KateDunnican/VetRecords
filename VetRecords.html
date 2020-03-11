@@ -27,6 +27,7 @@
         <!-- Main folder div-->
         <div class="col-md-9 folderdiv">
             <div class="tab-content" id="nav-tabContent">
+                <!-- Established pet info-->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     Name:
                     <br>
@@ -62,6 +63,7 @@
                     
 
                 </div>
+                <!-- New Pet Info-->
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <!-- Name -->
                     <label for="nameinput">What's your new pet's name?</label>
@@ -79,38 +81,101 @@
                     <input type="radio" id="cat" name="gender" value="female">
                     <label for="cat">Cat</label><br>
                     <!-- DOB -->
-                    <label for="ageinput">What's your new pet's name?</label>
-                    <input type="text" id="ageinput"><br>
+                    <label for="ageinput">What's your new pet's DOB?</label>
+                    <input type="text" id="ageinput" placeholder="xx/xx/xxxx"><br>
                     <!-- What kind of flea and tick prevention do you use? -->
+                    What kind of flea and tick prevention does your dog use? <br>
+                    <input type="radio" id="nexguard" name="nexguard" value="male">
+                    <label for="nexguard">Nexguard</label><br>
+                    <input type="radio" id="frontline" name="frontline" value="female">
+                    <label for="frontline">Frontline</label><br>
+                    <input type="radio" id="seresto" name="seresto" value="female">
+                    <label for="seresto">Seresto Collar</label><br>
                     <!-- What kind of heartworm prevention do you use? -->
-                    <!-- When was your pet's last heartworm test? -->
+                    What kind of heartworm prevention does your dog use? <br>
+                    <input type="radio" id="heartgard" name="heartgard" value="male">
+                    <label for="heartgard">Heartgard</label><br>
+                    <input type="radio" id="triheart" name="triheart" value="female">
+                    <label for="triheart">Tri-Heart Plus</label><br>
+                    <input type="radio" id="trifexis" name="trifexis" value="female">
+                    <label for="trifexis">Trifexis</label><br>
+                    <!-- When was your pet's last heartworm test? (should be every year at least)-->
+                    <label for="hwtdate">When was your dog's last heartworm test?</label>
+                    <input type="text" id="hwtdate" placeholder="xx/xx/xxxx"><br>
                     <!-- When was your pet's last nail trim? -->
+                    <label for="tntdate">When was your dog's last nail trim?</label>
+                    <input type="text" id="tntdate" placeholder="xx/xx/xxxx"><br>
                     <!-- When was your pet's last bath? -->
+                    <label for="bathdate">When was your dog's last bath?</label>
+                    <input type="text" id="bathdate" placeholder="xx/xx/xxxx"><br>
                     <!-- Is your pet fixed? -->
-
+                    Is your dog fixed? <br>
+                    <input type="radio" id="fixed" name="fixed" value="male">
+                    <label for="fixed">Yes</label><br>
+                    <input type="radio" id="notfixed" name="notfixed" value="female">
+                    <label for="notfixed">No :(</label><br>
 
 
 
 
                 </div>
+                <!-- General info -->
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    General
+                    General Info:
+                    <br>
+                    <!--  Vaccines -->
+                    <a href="https://www.petmd.com/dog/care/dog-vaccinations-for-every-lifestage">
+                        Vaccines and your dog
+                    </a>
+                    <br>
+                    <a href="https://www.petmd.com/cat/wellness/essential-cat-vaccinations">
+                        Vaccines and your cat
+                    </a>
+                    <br>
+                    <!--  Heartworm Prevention -->
+                    <a href="https://www.heartwormsociety.org/pet-owner-resources/heartworm-basics#is-there-an-effective-natural-prevention-for-heartworm">
+                        Heartworms and Your Pet
+                    </a>
+                    <br>
+                    <!--  Flea and Tick Prevention -->
+                    <a href="">
+                        Flea and Tick Prevention in Dogs
+                    </a>
+                    <br>
+                    <a href="">
+                        Flea and Tick Prevention in Cats
+                    </a>
+                    <br>
+                    <!--  Spaying and Neutering -->
+                    <a href="https://www.aspca.org/pet-care/general-pet-care/spayneuter-your-pet">Fixing Your Pet</a>
+                    <br>
+                    <!--  Feeding your pet -->
+                    <a href="">
+                        Feeding Your Dog
+                    </a>
+                    <br>
+                    <a href="">
+                        Feeding Your Cat
+                    </a>
                 </div>
             </div>
         </div>
         <!-- Tabs div -->
         <div class="col-md-1" id="tabsdiv">
             <nav>
+                <!-- Established pets tab -->
                 <div class="nav nav-tabs flex-column" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    <a class="nav-item nav-link verttabs" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
                        aria-controls="nav-home" aria-selected="false">
                         Your Pets
                     </a>
-                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                    <!-- New pets tab -->
+                    <a class="nav-item nav-link verttabs" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
                        aria-controls="nav-profile" aria-selected="false">
                         New Pets
                     </a>
-                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                    <!-- General info tab -->
+                    <a class="nav-item nav-link verttabs" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
                        aria-controls="nav-contact" aria-selected="false">
                         General
                     </a>
