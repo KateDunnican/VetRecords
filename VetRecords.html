@@ -33,50 +33,56 @@
             <div class="tab-content" id="nav-tabContent">
                 <!-- Established pet info-->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                    Name:
-                    <br>
-                    Species:
-                    <br>
-                    Age:
-                    <br>
-                    Status:
-                    <br>
-                    Pic:
-                    <br>
-                    Vaccine Due Dates:
-                    <ul>
-                        <li>Rabies:</li>
-                        <li>DHPP:</li>
-                        <li>Leptospirosis:</li>
-                        <li>Bordetella:</li>
-                        <li>k9 Influenza:</li>
-                        <li>Lyme</li>
-                    </ul>
-                    Prevention Due Dates:
-                    <ul>
-                        <li>Heartworm:</li>
-                        <li>Flea and Tick:</li>
-                    </ul>
-                    General Maintenance Due Dates:
-                    <ul>
-                        <li>Toenail trim:</li>
-                        <li>Bath:</li>
-                        <li>Dental Cleaning:</li>
-                        <li>Spay/Neuter:</li>
-                    </ul>
-                    
-
+                    <div class="infodivs" id="namediv">
+                        Name:
+                    </div>
+                    <div class="infodivs" id="speciesdiv">
+                        Species:
+                    </div>
+                    <div class="infodivs" id="agesdiv">
+                        Age:
+                    </div>
+                    <div class="infodivs" id="fixeddiv">
+                        Fixed:
+                    </div>
+                    <div class="infodivs" id="vaxdiv">
+                        Vaccine Due Dates:
+                        <ul>
+                            <li>Rabies:</li>
+                            <li>DHPP:</li>
+                            <li>Leptospirosis:</li>
+                            <li>Bordetella:</li>
+                            <li>k9 Influenza:</li>
+                            <li>Lyme</li>
+                        </ul>
+                    </div>
+                    <div class="infodivs" id="prevdiv">
+                        Prevention Due Dates:
+                        <ul>
+                            <li>Heartworm:</li>
+                            <li>Flea and Tick:</li>
+                        </ul>
+                    </div>
+                    <div class="infodivs" id="maintdiv">
+                        General Maintenance Due Dates:
+                        <ul>
+                            <li>Toenail trim:</li>
+                            <li>Bath:</li>
+                            <li>Dental Cleaning:</li>
+                            <li>Spay/Neuter:</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- New Pet Info-->
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <!-- Name? -->
-                    <div class="infodivs" id="namediv">
+                    <div class="newinfodivs" id="newnamediv">
                         <label for="nameinput">What's your new pet's name?</label>
                         <input type="text" id="nameinput"><br>
                     </div>
                     <!-- M or F? -->
-                    <div class="infodivs" id="genderdiv">
+                    <div class="newinfodivs" id="newgenderdiv">
                         Is your new pet male or female?<br>
                         <input type="radio" id="male" name="gender" value="male">
                         <label for="male">Male</label><br>
@@ -84,20 +90,20 @@
                         <label for="female">Female</label><br>
                     </div>
                     <!-- K9 or Fe? -->
-                    <div class="infodivs" id="speciesdiv">
+                    <div class="newinfodivs" id="newspeciesdiv">
                         Is your new pet a dog or a cat? <br>
-                        <input type="radio" id="dog" name="gender" value="male">
+                        <input type="radio" id="dog" name="species" value="k9">
                         <label for="dog">Dog</label><br>
-                        <input type="radio" id="cat" name="gender" value="female">
+                        <input type="radio" id="cat" name="species" value="fe">
                         <label for="cat">Cat</label><br>
                     </div>
                     <!-- DOB? -->
-                    <div class="infodivs" id="dobdiv">
+                    <div class="newinfodivs" id="newdobdiv">
                         <label for="ageinput">What's your new pet's DOB?</label>
                         <input type="text" id="ageinput" placeholder="xx/xx/xxxx"><br>
                     </div>
                     <!-- Flea and Tick? -->
-                    <div class="infodivs" id="ftdiv">
+                    <div class="newinfodivs" id="newftdiv">
                         Tell us about your flea and tick prevention: <br>
 
     <!--                    <input type="radio" id="nexguard" name="nexguard" value="male">-->
@@ -108,7 +114,7 @@
     <!--                    <label for="seresto">Seresto Collar</label><br>-->
                     </div>
                     <!-- HW Prev? -->
-                    <div class="infodivs" id="hwdiv">
+                    <div class="newinfodivs" id="newhwdiv">
                         Tell us about your heartworm prevention: <br>
                         <label for="hwbrandname">Brand name:</label>
                         <input type="text" id="hwbrandname" placeholder="e.x. Heartgard"><br>
@@ -124,32 +130,34 @@
     <!--                    <label for="trifexis">Trifexis</label><br>-->
                     </div>
                     <!-- HWT? (should be every year at least)-->
-                    <div class="infodivs" id="hwtdiv">
+                    <div class="newinfodivs" id="newhwtdiv">
                         <label for="hwtdate">When was your dog's last heartworm test?</label>
                         <input type="text" id="hwtdate" placeholder="xx/xx/xxxx"><br>
                     </div>
                     <!-- TNT? -->
-                    <div class="infodivs" id="tntdiv">
+                    <div class="newinfodivs" id="newtntdiv">
                         <label for="tntdate">When was your dog's last nail trim?</label>
                         <input type="text" id="tntdate" placeholder="xx/xx/xxxx"><br>
                     </div>
                     <!-- Bath? -->
-                    <div class="infodivs" id="bathdiv">
+                    <div class="newinfodivs" id="newbathdiv">
                         <label for="bathdate">When was your dog's last bath?</label>
                         <input type="text" id="bathdate" placeholder="xx/xx/xxxx"><br>
                     </div>
                     <!-- Fixed? -->
-                    <div class="infodivs" id="fixeddiv">
+                    <div class="newinfodivs" id="newfixeddiv">
                         Is your dog fixed? <br>
                         <input type="radio" id="fixed" name="fixed" value="male">
                         <label for="fixed">Yes</label><br>
-                        <input type="radio" id="notfixed" name="notfixed" value="female">
+                        <input type="radio" id="notfixed" name="fixed" value="female">
                         <label for="notfixed">No :(</label><br>
                     </div>
                     <!-- Vaccines? -->
-                    <div class="infodivs" id="vaxdiv">
+                    <div class="newinfodivs" id="newvaxdiv">
 
                     </div>
+                    <!-- SUBMIT -->
+                    <button class="newinfodivs" id="newinfosubmit">Submit</button>
 
 
 
@@ -237,5 +245,6 @@
 <!--MY JS/jQ-->
 <script src="js/jquery-2.2.4.js"></script>
 <script src="js/VetRecords.js"></script>
+
 </body>
 </html>

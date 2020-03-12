@@ -55,7 +55,7 @@ body{
     /*Established Pet content*/
 
     /*New Pet content*/
-        .infodivs{
+        .infodivs, .newinfodivs{
             margin-left: 3%;
         }
     /*General content*/
