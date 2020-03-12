@@ -1,12 +1,26 @@
 "use strict";
 
-//Assigning a pet name
-let newpetname = $("#nameinput").val();
+//Assigning name
+let newname;
+let newspecies;
+let newage;
+let newfixed;
+let newvax;
+let newprev;
+let newgenmaint;
 
-//This part works, it's the let that doesn't
+
 $("#newinfosubmit").click(function () {
+    newname = $("#nameinput").val();
     console.log("Running");
     console.log(newpetname);
-    $("#namediv").html("Name: ").append(newpetname);
+    $("#namediv").html("Name: ").append(newname);
     }
 );
+
+//Assigning species
+//Assigning age
+//Assigning fixed
+//Assigning vaccines
+//Assigning preventions
+//Assigning general maint.
