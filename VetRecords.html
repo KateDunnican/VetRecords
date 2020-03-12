@@ -14,8 +14,12 @@
 <!-- Jumbotron -->
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">More stuff</p>
+        <h1 class="display-4">
+            Fluid jumbotron
+        </h1>
+        <p class="lead">
+            Making it a breeze to keep your pet healthy and up to date!
+        </p>
     </div>
 </div>
 <!-- Rest of body -->
@@ -63,62 +67,94 @@
                     
 
                 </div>
+
                 <!-- New Pet Info-->
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <!-- Name -->
-                    <label for="nameinput">What's your new pet's name?</label>
-                    <input type="text" id="nameinput"><br>
-                    <!-- M or F -->
-                    Is your new pet male or female?<br>
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label><br>
-                    <!-- K9 or Fe -->
-                    Is your new pet a dog or a cat? <br>
-                    <input type="radio" id="dog" name="gender" value="male">
-                    <label for="dog">Dog</label><br>
-                    <input type="radio" id="cat" name="gender" value="female">
-                    <label for="cat">Cat</label><br>
-                    <!-- DOB -->
-                    <label for="ageinput">What's your new pet's DOB?</label>
-                    <input type="text" id="ageinput" placeholder="xx/xx/xxxx"><br>
-                    <!-- What kind of flea and tick prevention do you use? -->
-                    What kind of flea and tick prevention does your dog use? <br>
-                    <input type="radio" id="nexguard" name="nexguard" value="male">
-                    <label for="nexguard">Nexguard</label><br>
-                    <input type="radio" id="frontline" name="frontline" value="female">
-                    <label for="frontline">Frontline</label><br>
-                    <input type="radio" id="seresto" name="seresto" value="female">
-                    <label for="seresto">Seresto Collar</label><br>
-                    <!-- What kind of heartworm prevention do you use? -->
-                    What kind of heartworm prevention does your dog use? <br>
-                    <input type="radio" id="heartgard" name="heartgard" value="male">
-                    <label for="heartgard">Heartgard</label><br>
-                    <input type="radio" id="triheart" name="triheart" value="female">
-                    <label for="triheart">Tri-Heart Plus</label><br>
-                    <input type="radio" id="trifexis" name="trifexis" value="female">
-                    <label for="trifexis">Trifexis</label><br>
-                    <!-- When was your pet's last heartworm test? (should be every year at least)-->
-                    <label for="hwtdate">When was your dog's last heartworm test?</label>
-                    <input type="text" id="hwtdate" placeholder="xx/xx/xxxx"><br>
-                    <!-- When was your pet's last nail trim? -->
-                    <label for="tntdate">When was your dog's last nail trim?</label>
-                    <input type="text" id="tntdate" placeholder="xx/xx/xxxx"><br>
-                    <!-- When was your pet's last bath? -->
-                    <label for="bathdate">When was your dog's last bath?</label>
-                    <input type="text" id="bathdate" placeholder="xx/xx/xxxx"><br>
-                    <!-- Is your pet fixed? -->
-                    Is your dog fixed? <br>
-                    <input type="radio" id="fixed" name="fixed" value="male">
-                    <label for="fixed">Yes</label><br>
-                    <input type="radio" id="notfixed" name="notfixed" value="female">
-                    <label for="notfixed">No :(</label><br>
+                    <!-- Name? -->
+                    <div class="infodivs" id="namediv">
+                        <label for="nameinput">What's your new pet's name?</label>
+                        <input type="text" id="nameinput"><br>
+                    </div>
+                    <!-- M or F? -->
+                    <div class="infodivs" id="genderdiv">
+                        Is your new pet male or female?<br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                    </div>
+                    <!-- K9 or Fe? -->
+                    <div class="infodivs" id="speciesdiv">
+                        Is your new pet a dog or a cat? <br>
+                        <input type="radio" id="dog" name="gender" value="male">
+                        <label for="dog">Dog</label><br>
+                        <input type="radio" id="cat" name="gender" value="female">
+                        <label for="cat">Cat</label><br>
+                    </div>
+                    <!-- DOB? -->
+                    <div class="infodivs" id="dobdiv">
+                        <label for="ageinput">What's your new pet's DOB?</label>
+                        <input type="text" id="ageinput" placeholder="xx/xx/xxxx"><br>
+                    </div>
+                    <!-- Flea and Tick? -->
+                    <div class="infodivs" id="ftdiv">
+                        Tell us about your flea and tick prevention: <br>
 
+    <!--                    <input type="radio" id="nexguard" name="nexguard" value="male">-->
+    <!--                    <label for="nexguard">Nexguard</label><br>-->
+    <!--                    <input type="radio" id="frontline" name="frontline" value="female">-->
+    <!--                    <label for="frontline">Frontline</label><br>-->
+    <!--                    <input type="radio" id="seresto" name="seresto" value="female">-->
+    <!--                    <label for="seresto">Seresto Collar</label><br>-->
+                    </div>
+                    <!-- HW Prev? -->
+                    <div class="infodivs" id="hwdiv">
+                        Tell us about your heartworm prevention: <br>
+                        <label for="hwbrandname">Brand name:</label>
+                        <input type="text" id="hwbrandname" placeholder="e.x. Heartgard"><br>
+                        <label for="hwlength">How many months does each dose last?</label>
+                        <input type="text" id="hwlength" placeholder="e.x. 1"><br>
+                        <label for="hwamount">How many doses do you have left?</label>
+                        <input type="text" id="hwamount" placeholder="e.x. 6"><br>
+    <!--                    <input type="radio" id="heartgard" name="heartgard" value="male">-->
+    <!--                    <label for="heartgard">Heartgard</label><br>-->
+    <!--                    <input type="radio" id="triheart" name="triheart" value="female">-->
+    <!--                    <label for="triheart">Tri-Heart Plus</label><br>-->
+    <!--                    <input type="radio" id="trifexis" name="trifexis" value="female">-->
+    <!--                    <label for="trifexis">Trifexis</label><br>-->
+                    </div>
+                    <!-- HWT? (should be every year at least)-->
+                    <div class="infodivs" id="hwtdiv">
+                        <label for="hwtdate">When was your dog's last heartworm test?</label>
+                        <input type="text" id="hwtdate" placeholder="xx/xx/xxxx"><br>
+                    </div>
+                    <!-- TNT? -->
+                    <div class="infodivs" id="tntdiv">
+                        <label for="tntdate">When was your dog's last nail trim?</label>
+                        <input type="text" id="tntdate" placeholder="xx/xx/xxxx"><br>
+                    </div>
+                    <!-- Bath? -->
+                    <div class="infodivs" id="bathdiv">
+                        <label for="bathdate">When was your dog's last bath?</label>
+                        <input type="text" id="bathdate" placeholder="xx/xx/xxxx"><br>
+                    </div>
+                    <!-- Fixed? -->
+                    <div class="infodivs" id="fixeddiv">
+                        Is your dog fixed? <br>
+                        <input type="radio" id="fixed" name="fixed" value="male">
+                        <label for="fixed">Yes</label><br>
+                        <input type="radio" id="notfixed" name="notfixed" value="female">
+                        <label for="notfixed">No :(</label><br>
+                    </div>
+                    <!-- Vaccines? -->
+                    <div class="infodivs" id="vaxdiv">
+
+                    </div>
 
 
 
                 </div>
+
                 <!-- General info -->
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                     General Info:

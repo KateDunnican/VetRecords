@@ -1,48 +1,61 @@
 body{
     background-image: url("images/desk.jpg");
-    /*background-color: #8C7051;*/
 }
-.folderdiv{
-    width: 100vw;
-    height: 100vh;
-    background-image: url("images/asfalt-light.png");
-    background-color: rgba(250, 225, 188, 1);
-    border: 1px solid rgba(237, 210, 172, 1);
-    padding: 0;
-}
-.nav{
-    border-bottom: 0;
-}
-.nav-tabs{
-    display: flex;
-    flex-direction: column;
-}
-#custom .nav-link{
-    border-radius: 0 10% 10% 0;
-}
-#custom .nav-item{
-    background-color: rgba(250, 225, 188, 1);
-    height: 110px;
-    width: 50px;
-    display: flex;
-    align-content: center;
-    border: 1px solid rgba(237, 210, 172, 1);
-}
-.verttabs{
-    display: flex;
-    flex-direction: column;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    color: black;
-    justify-content: center;
 
-}
-.tab-pane{
-    margin: 20px;
-    background-color: rgba(255, 255, 248, 1);
-    background-image: url("images/asfalt-light.png");
-    height: 95vh;
-}
-#tabsdiv{
-    padding-left: 0;
-}
+/* Manila folder background div */
+    .folderdiv{
+        width: 100vw;
+        height: 100vh;
+        background-image: url("images/asfalt-light.png");
+        background-color: rgba(250, 225, 188, 1);
+        border: 1px solid rgba(237, 210, 172, 1);
+        padding: 0;
+    }
+
+/* Cool folder tabs */
+    .nav{
+        border-bottom: 0;
+    }
+    .nav-tabs{
+        display: flex;
+        flex-direction: column;
+    }
+    #custom .nav-item{
+        background-color: rgba(250, 225, 188, 1);
+        height: 110px;
+        width: 50px;
+        display: flex;
+        align-content: center;
+        border: 1px solid rgba(237, 210, 172, 1);
+    }
+    #tabsdiv {
+        padding-left: 0;
+    }
+
+    /* anchors inside tabs */
+        #custom .nav-link{
+            border-radius: 0 10% 10% 0;
+        }
+        .verttabs{
+            display: flex;
+            flex-direction: column;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            color: black;
+            justify-content: center;
+        }
+
+/* Tab content CSS */
+    .tab-pane{
+        margin: 20px;
+        background-color: rgba(255, 255, 248, 1);
+        background-image: url("images/asfalt-light.png");
+        height: 95vh;
+    }
+    /*Established Pet content*/
+
+    /*New Pet content*/
+        .infodivs{
+            margin-left: 3%;
+        }
+    /*General content*/
