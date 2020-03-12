@@ -33,43 +33,54 @@
             <div class="tab-content" id="nav-tabContent">
                 <!-- Established pet info-->
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <!-- Name -->
                     <div class="infodivs" id="namediv">
                         Name:
                     </div>
+                    <!-- Gender -->
+                    <div class="infodivs" id="genderdiv">
+                        M/F:
+                    </div>
+                    <!-- Species -->
                     <div class="infodivs" id="speciesdiv">
                         Species:
                     </div>
-                    <div class="infodivs" id="agesdiv">
+                    <!-- DOB/Age -->
+                    <div class="infodivs" id="dobdiv">
                         Age:
                     </div>
+                    <!-- Fixed -->
                     <div class="infodivs" id="fixeddiv">
                         Fixed:
                     </div>
+                    <!-- Vaccines -->
                     <div class="infodivs" id="vaxdiv">
                         Vaccine Due Dates:
                         <ul>
-                            <li>Rabies:</li>
-                            <li>DHPP:</li>
-                            <li>Leptospirosis:</li>
-                            <li>Bordetella:</li>
-                            <li>k9 Influenza:</li>
-                            <li>Lyme</li>
+                            <li class="vaxlis" id="rabiesvax">Rabies:</li>
+                            <li class="vaxlis" id="dhppvax">DHPP:</li>
+                            <li class="vaxlis" id="leptovax">Leptospirosis:</li>
+                            <li class="vaxlis" id="k9bordvax">Bordetella:</li>
+                            <li class="vaxlis" id="k9fluvax">k9 Influenza:</li>
+                            <li class="vaxlis" id="lymevax">Lyme</li>
                         </ul>
                     </div>
+                    <!-- Preventions -->
                     <div class="infodivs" id="prevdiv">
                         Prevention Due Dates:
                         <ul>
-                            <li>Heartworm:</li>
-                            <li>Flea and Tick:</li>
+                            <li class="prevlis" id="hwprev">Heartworm:</li>
+                            <li class="prevlis" id="ftprev">Flea and Tick:</li>
                         </ul>
                     </div>
+                    <!-- General Maint -->
                     <div class="infodivs" id="maintdiv">
                         General Maintenance Due Dates:
                         <ul>
-                            <li>Toenail trim:</li>
-                            <li>Bath:</li>
-                            <li>Dental Cleaning:</li>
-                            <li>Spay/Neuter:</li>
+                            <li class="maintlis" id="tntmaint">Toenail trim:</li>
+                            <li class="maintlis" id="bathmaint">Bath:</li>
+                            <li class="maintlis" id="dentalmaint">Dental Cleaning:</li>
+                            <li class="maintlis" id="fixmaint">Spay/Neuter:</li>
                         </ul>
                     </div>
                 </div>
@@ -92,15 +103,15 @@
                     <!-- K9 or Fe? -->
                     <div class="newinfodivs" id="newspeciesdiv">
                         Is your new pet a dog or a cat? <br>
-                        <input type="radio" id="dog" name="species" value="k9">
+                        <input type="radio" id="dog" name="species" value="dog">
                         <label for="dog">Dog</label><br>
-                        <input type="radio" id="cat" name="species" value="fe">
+                        <input type="radio" id="cat" name="species" value="cat">
                         <label for="cat">Cat</label><br>
                     </div>
                     <!-- DOB? -->
                     <div class="newinfodivs" id="newdobdiv">
-                        <label for="ageinput">What's your new pet's DOB?</label>
-                        <input type="text" id="ageinput" placeholder="xx/xx/xxxx">
+                        <label for="dobinput">What's your new pet's DOB?</label>
+                        <input type="text" id="dobinput" placeholder="xx/xx/xxxx">
                     </div>
                     <!-- Flea and Tick? -->
                     <div class="newinfodivs" id="newftdiv">
@@ -147,9 +158,9 @@
                     <!-- Fixed? -->
                     <div class="newinfodivs" id="newfixeddiv">
                         Is your dog fixed? <br>
-                        <input type="radio" id="fixed" name="fixed" value="male">
+                        <input type="radio" id="fixed" name="fixed" value="fixed">
                         <label for="fixed">Yes</label><br>
-                        <input type="radio" id="notfixed" name="fixed" value="female">
+                        <input type="radio" id="notfixed" name="fixed" value="not-fixed">
                         <label for="notfixed">No :(</label><br>
                     </div>
                     <!-- Vaccines? -->
