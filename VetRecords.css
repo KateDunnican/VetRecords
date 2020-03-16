@@ -1,6 +1,10 @@
 body{
     background-image: url("images/desk.jpg");
 }
+/*Jumbotron*/
+.jumbotron{
+/*background: url("images/messydesk.jpeg");*/
+}
 
 /* Manila folder background div */
     .folderdiv{
