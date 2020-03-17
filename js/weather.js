@@ -1,68 +1,65 @@
 "use strict";
 
-let userLocation = "San Antonio";
-// lat = 29.4252;
-// long = -98.4916;
+//TODO: Set up userLocation to = input from "where does your pet live?"
 
-let lat;
-let long;
+let userLocation = "Paris Texas";
 
-function geocodeIt() {
-    geocode(userLocation, mapboxToken);
+//SA's coords
+let lat = 29.4252;
+let long = -98.4916;
 
-    lat = data.features[0].center[1];
-    long = data.features[0].center[0];
+geocode(userLocation, mapboxToken).then(function(results) {
+    lat = results[1];
+    long = results[0];
     console.log(lat);
     console.log(long);
+});
+
+let weatherMessage;
+let weatherImage;
+
+function getWeather(x) {
+    if (x.daily.data[0].temperatureLow <= "40.0") {
+        weatherMessage = "it is COLD up in this bitch!  Bring your pet inside!";
+        weatherImage = "url(images/cold.jpeg)";
+        $(".lil-jumbo").css("background", weatherImage).show();
+        $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
+    }
+    if (x.daily.data[0].temperatureHigh >= "90.0") {
+        weatherMessage = "it is HOT up in this bitch!  Bring your pet inside!";
+        weatherImage = "url(images/hot.jpeg)";
+        $(".lil-jumbo").css("background", weatherImage).show();
+        $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
+    }
+    if (x.daily.data[0].icon === "rain") {
+        weatherMessage = "it is STORMING up in this bitch!  Bring your pet inside!";
+        weatherImage = "url(images/storm.jpeg)";
+        $(".lil-jumbo").css("background", weatherImage).show();
+        $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
+    }
+    //TEST CONDITION
+    // if (x.daily.data[0].icon === "partly-cloudy-day") {
+    //     weatherMessage = "Your test worked!";
+    //     weatherImage = "url(images/storm.jpeg)";
+    //     $(".lil-jumbo").css("background", weatherImage).show();
+    //     $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
+    // }
+    $(".lil-jumbo-text").html(weatherMessage);
 }
-geocodeIt();
 
-// let weatherMessage;
-// let weatherImage;
-//
-// function getWeather(x) {
-//     if (x.daily.data[0].temperatureLow <= "40.0") {
-//         weatherMessage = "it is COLD up in this bitch!  Bring your pet inside!";
-//         weatherImage = "url(images/cold.jpeg)";
-//         $(".lil-jumbo").css("background", weatherImage).show();
-//         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
-//     }
-//     if (x.daily.data[0].temperatureHigh >= "90.0") {
-//         weatherMessage = "it is HOT up in this bitch!  Bring your pet inside!";
-//         weatherImage = "url(images/hot.jpeg)";
-//         $(".lil-jumbo").css("background", weatherImage).show();
-//         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
-//     }
-//     if (x.daily.data[0].icon === "rain") {
-//         weatherMessage = "it is STORMING up in this bitch!  Bring your pet inside!";
-//         weatherImage = "url(images/storm.jpeg)";
-//         $(".lil-jumbo").css("background", weatherImage).show();
-//         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
-//     }
-//     //TEST CONDITION
-//     if (x.daily.data[0].icon === "partly-cloudy-day") {
-//         weatherMessage = "Your test worked!";
-//         weatherImage = "url(images/storm.jpeg)";
-//         $(".lil-jumbo").css("background", weatherImage).show();
-//         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
-//     }
-//     $(".lil-jumbo-text").html(weatherMessage);
-// }
-//
-// function reportWeather(la, lo) {
-//     $(".lil-jumbo").hide();
-//
-//     $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + DarkSkyToken + "/" + la + "," + lo).done(function (data) {
-//         // console.log(data.daily.data[0]);
-//         console.log("Low: " + data.daily.data[0].temperatureLow);
-//         console.log("High: " + data.daily.data[0].temperatureHigh);
-//         console.log(data.daily.data[0].icon);
-//         getWeather(data)
-//     });
-// }
-//
-// reportWeather(lat, long);
+function reportWeather(la, lo) {
+    $(".lil-jumbo").hide();
 
-//Need geocoder to translate userLocation into lat and long
+    $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + DarkSkyToken + "/" + la + "," + lo).done(function (data) {
+        // console.log(data.daily.data[0]);
+        console.log("Low: " + data.daily.data[0].temperatureLow);
+        console.log("High: " + data.daily.data[0].temperatureHigh);
+        console.log(data.daily.data[0].icon);
+        getWeather(data)
+    });
+}
+
+reportWeather(lat, long);
+
 
 
