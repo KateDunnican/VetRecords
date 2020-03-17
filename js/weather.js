@@ -2,7 +2,7 @@
 
 //TODO: Set up userLocation to = input from "where does your pet live?"
 
-let userLocation = "Paris Texas";
+let userLocation = "San Antonio Texas";
 
 //SA's coords
 let lat = 29.4252;
@@ -11,8 +11,8 @@ let long = -98.4916;
 geocode(userLocation, mapboxToken).then(function(results) {
     lat = results[1];
     long = results[0];
-    console.log(lat);
-    console.log(long);
+    // console.log(lat);
+    // console.log(long);
 });
 
 let weatherMessage;
@@ -20,19 +20,19 @@ let weatherImage;
 
 function getWeather(x) {
     if (x.daily.data[0].temperatureLow <= "40.0") {
-        weatherMessage = "it is COLD up in this bitch!  Bring your pet inside!";
+        weatherMessage = "It is below 40°F in " + userLocation + ", now would be a good time to bring your pet inside.";
         weatherImage = "url(images/cold.jpeg)";
         $(".lil-jumbo").css("background", weatherImage).show();
         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
     }
     if (x.daily.data[0].temperatureHigh >= "90.0") {
-        weatherMessage = "it is HOT up in this bitch!  Bring your pet inside!";
+        weatherMessage = "It is above 90°F in " + userLocation + ", now would be a good time to bring your pet inside.";
         weatherImage = "url(images/hot.jpeg)";
         $(".lil-jumbo").css("background", weatherImage).show();
         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
     }
     if (x.daily.data[0].icon === "rain") {
-        weatherMessage = "it is STORMING up in this bitch!  Bring your pet inside!";
+        weatherMessage = "It's raining in " + userLocation + ", now would be a good time to bring your pet inside.";
         weatherImage = "url(images/storm.jpeg)";
         $(".lil-jumbo").css("background", weatherImage).show();
         $(".lil-jumbo-container").css("background-color", "rgba(255, 255, 248, 1)");
@@ -52,9 +52,9 @@ function reportWeather(la, lo) {
 
     $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + DarkSkyToken + "/" + la + "," + lo).done(function (data) {
         // console.log(data.daily.data[0]);
-        console.log("Low: " + data.daily.data[0].temperatureLow);
-        console.log("High: " + data.daily.data[0].temperatureHigh);
-        console.log(data.daily.data[0].icon);
+        console.log("Today's Low: " + data.daily.data[0].temperatureLow);
+        console.log("Today's High: " + data.daily.data[0].temperatureHigh);
+        console.log("Today's Condition: " + data.daily.data[0].icon);
         getWeather(data)
     });
 }

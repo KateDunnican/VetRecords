@@ -1,10 +1,15 @@
 body{
     background-image: url("images/desk.jpg");
 }
-/*Jumbotron*/
-.jumbotron{
-/*background: url("images/messydesk.jpeg");*/
-}
+/*Jumbotrons*/
+    /*Big Jumbo*/
+    .jumbotron{
+    /*background: url("images/messydesk.jpeg");*/
+    }
+    /*Lil Jumbo*/
+    .jumbo-h1{
+        font-weight: 300;
+    }
 
 /* Manila folder background div */
     .folderdiv{
