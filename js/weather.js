@@ -61,4 +61,3 @@ else {
         reportWeather(lat, long);
     });
 }
-

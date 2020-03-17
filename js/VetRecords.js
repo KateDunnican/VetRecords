@@ -9,6 +9,7 @@ let newfixed;
 let newvax;
 let newprev;
 let newgenmaint;
+let newLocation;
 
 //Today's date for use with DOB --> Age translation
 let today = new Date();
@@ -16,17 +17,25 @@ let today = new Date();
 // let currentDate = today.getTime()
 console.log(today);
 
-// To set two dates to two variables
-var petDOB = new Date("01/14/1996");
-// var date2 = new Date("07/30/2019");
+//TODO: replace my Bday with $("#dobinput").val()
+let petDOB = new Date("01/14/1996");
 
 // To calculate the time difference of two dates
-var Difference_In_Time = today.getTime() - petDOB.getTime();
+let Difference_In_Time = today.getTime() - petDOB.getTime();
 
 // To calculate the no. of days between two dates
-var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+let Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
 console.log(Difference_In_Days);
 
+
+function getYMD(x){
+    let years = Math.floor(x / 365.25);
+    let months = Math.floor((x % 365.25)/30.42);
+    let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
+    let age = (years + " years, " + months + " months, " + days + " days");
+    console.log(age);
+}
+getYMD(Difference_In_Days);
 
 
 $("#newinfosubmit").click(function () {
