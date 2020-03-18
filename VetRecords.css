@@ -54,13 +54,17 @@ body{
             justify-content: center;
         }
 
-/* Tab content CSS */
+/* Main pages content CSS */
     .tab-pane{
         margin: 20px;
         background-color: rgba(255, 255, 248, 1);
         background-image: url("images/asfalt-light.png");
         min-height: 95vh;
     }
+    /*Titles*/
+        .titlediv{
+            justify-content: center;
+        }
     /*Established Pet content*/
 
     /*New Pet content*/

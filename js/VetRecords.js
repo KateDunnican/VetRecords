@@ -14,7 +14,7 @@ $("#newinfosubmit").click(function () {
 
     //Assigning name
     let newname = $("#nameinput").val();
-    $("#namediv").html("Name: ").append(newname);
+    $("#namedivspan").html("").append(newname);
 
     //Assigning age
     let todaysDate = new Date();
@@ -43,57 +43,57 @@ $("#newinfosubmit").click(function () {
     //Assigning pet location
     let newLocation = $("#locationinput").val();
     $("#locationdiv").html("Where your pet lives: ").append(newLocation);
-
-    //if newspecies = "dog" when submit clicked
-        //SHOW dog options
-        //Assigning DOG vaccines
-            // Rabies
-            // DHPP
-            // Leptospirosis
-            // Bordetella
-            // k9 Influenza
-            // Lyme
-
-        //Assigning DOG FT prevention
-            //Brand name
-            //Duration of each dose
-            //Doses left
-            //Last dose given/first dose to be given
-
-        //Assigning DOG HW prevention
-            //Brand name
-            //Duration of each dose
-            //Doses left
-            //Last dose given/first dose to be given
-
-        //Assigning DOG general maint.
-            //Last HWT?
-            //Last nail trim?
-            //Last bath?
-
-    //if newspecies = "cat" when submit clicked
-        //SHOW cat options
-        //Assigning CAT vaccines
-            //Rabies
-            //FVRCP
-            //FeLV
-            //Bordetella
-
-        //Assigning CAT FT prevention
-            //Brand name
-            //Duration of each dose
-            //Doses left
-            //Last dose given/first dose to be given
-
-        //Assigning CAT HW prevention
-            //Brand name
-            //Duration of each dose
-            //Doses left
-            //Last dose given/first dose to be given
-
-        //Assigning CAT general maint.
-            //Last nail trim?
-
-
 });
+
+
+
+//if newspecies = "dog" when submit clicked
+//SHOW dog options
+//Assigning DOG vaccines
+// Rabies
+// DHPP
+// Leptospirosis
+// Bordetella
+// k9 Influenza
+// Lyme
+
+//Assigning DOG FT prevention
+//Brand name
+//Duration of each dose
+//Doses left
+//Last dose given/first dose to be given
+
+//Assigning DOG HW prevention
+//Brand name
+//Duration of each dose
+//Doses left
+//Last dose given/first dose to be given
+
+//Assigning DOG general maint.
+//Last HWT?
+//Last nail trim?
+//Last bath?
+
+//if newspecies = "cat" when submit clicked
+//SHOW cat options
+//Assigning CAT vaccines
+//Rabies
+//FVRCP
+//FeLV
+//Bordetella
+
+//Assigning CAT FT prevention
+//Brand name
+//Duration of each dose
+//Doses left
+//Last dose given/first dose to be given
+
+//Assigning CAT HW prevention
+//Brand name
+//Duration of each dose
+//Doses left
+//Last dose given/first dose to be given
+
+//Assigning CAT general maint.
+//Last nail trim?
 
