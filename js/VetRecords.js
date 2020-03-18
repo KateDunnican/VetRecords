@@ -1,5 +1,12 @@
 "use strict";
 
+$("#dog").click(function () {
+    console.log("dog");
+});
+$("#cat").click(function () {
+    console.log("cat");
+});
+
 $("#newinfosubmit").click(function () {
     //Assigning species
     let newspecies = $("input[type=radio][name=species]:checked").val();
@@ -34,9 +41,10 @@ $("#newinfosubmit").click(function () {
     $("#fixeddiv").html("Fixed: ").append(newfixed);
 
     //Assigning pet location
+    let newLocation = $("#locationinput").val();
+    $("#locationdiv").html("Where your pet lives: ").append(newLocation);
 
     //if newspecies = "dog"
-
         //Assigning DOG vaccines
             // Rabies
             // DHPP
@@ -63,7 +71,6 @@ $("#newinfosubmit").click(function () {
             //Last bath?
 
     //if newspecies = "cat"
-
         //Assigning CAT vaccines
             //Rabies
             //FVRCP

@@ -1,12 +1,14 @@
 "use strict";
 
-//TODO: Set up userLocation to = input from "where does your pet live?"
-
-let userLocation = "San Antonio Texas";
+let userLocation = "Orlando Florida";
+//     TODO: make sure this replaces the hardcoded location
+//      when you learn how to store info
+    userLocation = $("#locationdiv").val();
 let lat;
 let long;
 let weatherMessage;
 let weatherImage;
+
 
 if (userLocation === " "){
     $(".lil-jumbo").hide();
