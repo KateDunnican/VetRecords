@@ -44,7 +44,8 @@ $("#newinfosubmit").click(function () {
     let newLocation = $("#locationinput").val();
     $("#locationdiv").html("Where your pet lives: ").append(newLocation);
 
-    //if newspecies = "dog"
+    //if newspecies = "dog" when submit clicked
+        //SHOW dog options
         //Assigning DOG vaccines
             // Rabies
             // DHPP
@@ -70,7 +71,8 @@ $("#newinfosubmit").click(function () {
             //Last nail trim?
             //Last bath?
 
-    //if newspecies = "cat"
+    //if newspecies = "cat" when submit clicked
+        //SHOW cat options
         //Assigning CAT vaccines
             //Rabies
             //FVRCP

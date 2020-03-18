@@ -1,9 +1,9 @@
 "use strict";
 
-let userLocation = "Orlando Florida";
+let userLocation = "San Antonio Texas";
 //     TODO: make sure this replaces the hardcoded location
 //      when you learn how to store info
-    userLocation = $("#locationdiv").val();
+//     userLocation = $("#locationdiv").val();
 let lat;
 let long;
 let weatherMessage;
