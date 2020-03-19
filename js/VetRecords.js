@@ -1,10 +1,16 @@
 "use strict";
 
+$("#dogdiv, #catdiv").hide();
+
 $("#dog").click(function () {
     console.log("dog");
+    $("#dogdiv").show();
+    $("#catdiv").hide();
 });
 $("#cat").click(function () {
     console.log("cat");
+    $("#catdiv").show();
+    $("#dogdiv").hide();
 });
 
 $("#newinfosubmit").click(function () {
@@ -43,6 +49,9 @@ $("#newinfosubmit").click(function () {
     //Assigning pet location
     let newLocation = $("#locationinput").val();
     $("#locationdiv").html("Where your pet lives: ").append(newLocation);
+
+    //IF newspcies = "dog" use dog stuff
+    //IF newspecies = "cat" use cat stuff
 });
 
 
