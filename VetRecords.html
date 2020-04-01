@@ -12,7 +12,6 @@
 <body id="custom">
 <!-- MY HTML -->
 <!-- Jumbotron -->
-<!--TODO: Add in a space for the weather report and warning message-->
 <div class="jumbotron jumbotron-fluid">
     <div class="container jumbo-container">
         <h1 class="display-4 jumbo-h1">
@@ -43,7 +42,7 @@
                     </div>
                     <!-- Name -->
                     <div class="infodivs" id="namediv">
-                        Name: <span class="font-weight-bold" id="namedivspan">Yello</span>
+                        Name: <span class="font-weight-bold" id="namedivspan"></span>
                     </div>
                     <!-- Species -->
                     <div class="infodivs" id="speciesdiv">
@@ -68,14 +67,6 @@
                     <!-- Vaccines -->
                     <div class="infodivs" id="vaxdiv">
                         Vaccine Due Dates:
-                        <ul>
-                            <li class="vaxlis" id="rabiesvax">Rabies:</li>
-                            <li class="vaxlis" id="dhppvax">DHPP:</li>
-                            <li class="vaxlis" id="leptovax">Leptospirosis:</li>
-                            <li class="vaxlis" id="k9bordvax">Bordetella:</li>
-                            <li class="vaxlis" id="k9fluvax">k9 Influenza:</li>
-                            <li class="vaxlis" id="lymevax">Lyme</li>
-                        </ul>
                     </div>
                     <!-- Preventions -->
                     <div class="infodivs" id="prevdiv">
@@ -88,12 +79,6 @@
                     <!-- General Maint -->
                     <div class="infodivs" id="maintdiv">
                         General Maintenance Due Dates:
-                        <ul>
-                            <li class="maintlis" id="hwtmaint">Heartworm Test:</li>
-                            <li class="maintlis" id="dentalmaint">Dental Cleaning:</li>
-                            <li class="maintlis" id="tntmaint">Toenail trim:</li>
-                            <li class="maintlis" id="bathmaint">Bath:</li>
-                        </ul>
                     </div>
                 </div>
 
@@ -223,7 +208,7 @@
                             <span class="font-weight-bold">Tell us about your flea and tick prevention: </span><br>
                             <label for="catftbrandname">Brand name:</label>
                             <br>
-                            <input type="text" id="catftbrandname" placeholder="e.x. Nexgard"><br>
+                            <input type="text" id="catftbrandname" placeholder="e.x. Revolution"><br>
                             <label for="catftlength">How many months does each dose last?</label>
                             <br>
                             <input type="text" id="catftlength" placeholder="e.x. 1"><br>
@@ -250,21 +235,15 @@
                             <br>
                             <input type="text" id="cathwdate" placeholder="xx/xx/xxxx"><br>
                         </div>
-                        <!-- HWT? (should be every year at least)-->
-                        <div class="newinfodivs" id="newcathwtdiv">
-                            <label for="cathwtdate"><span class="font-weight-bold">When was your dog's last heartworm test?</span></label>
-                            <br>
-                            <input type="text" id="cathwtdate" placeholder="xx/xx/xxxx">
-                        </div>
                         <!-- Dental? -->
                         <div class="newinfodivs" id="newcatdentaldiv">
-                            <label for="catdentaldate"><span class="font-weight-bold">When was your dog's last dental cleaning?</span></label>
+                            <label for="catdentaldate"><span class="font-weight-bold">When was your cat's last dental cleaning?</span></label>
                             <br>
                             <input type="text" id="catdentaldate" placeholder="xx/xx/xxxx">
                         </div>
                         <!-- TNT? -->
                         <div class="newinfodivs" id="newcattntdiv">
-                            <label for="cattntdate"><span class="font-weight-bold">When was your dog's last nail trim?</span></label>
+                            <label for="cattntdate"><span class="font-weight-bold">When was your cat's last nail trim?</span></label>
                             <br>
                             <input type="text" id="cattntdate" placeholder="xx/xx/xxxx">
                         </div>
@@ -333,6 +312,12 @@
                         <a href="">
                             Feeding Your Cat
                         </a>
+                        <br>
+                        <!-- Thunder Storms and your pet -->
+                        <a href="">
+                            Thunder Storms and your pet (-------------------------------ADD LINK)
+                        </a>
+                        <br>
                     </div>
                 </div>
             </div>

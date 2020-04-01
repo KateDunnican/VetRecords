@@ -13,7 +13,8 @@ $("#cat").click(function () {
     $("#dogdiv").hide();
 });
 
-$("#newinfosubmit").click(function () {
+//Species Neutral Info Assignment
+function allPetStuff (){
     //Assigning species
     let newspecies = $("input[type=radio][name=species]:checked").val();
     $("#speciesdiv").html("Species: ").append(newspecies);
@@ -49,60 +50,75 @@ $("#newinfosubmit").click(function () {
     //Assigning pet location
     let newLocation = $("#locationinput").val();
     $("#locationdiv").html("Where your pet lives: ").append(newLocation);
+}
 
-    //IF newspcies = "dog" use dog stuff
-    //IF newspecies = "cat" use cat stuff
+// Submit DOG stuff
+$("#newdoginfosubmit").click(function () {
+    allPetStuff();
+
+    //Change Vax info to dog vax info
+    $("#vaxdiv").html("Vaccine Due Dates:").append(
+        "<ul>" +
+        "<li class='vaxlis' id='rabiesvax'>Rabies: " + /*Due Date*/ + "</li>" +
+        "<li class='vaxlis' id='dhppvax'>DHPP: " + /*Due Date*/ + "</li>" +
+        "<li class='vaxlis' id='leptovax'>Leptospirosis: " + /*Due Date*/ +  "</li>" +
+        "<li class='vaxlis' id='k9bordvax'>Bordetella: " + /*Due Date*/ + "</li>" +
+        "<li class='vaxlis' id='k9fluvax'>k9 Influenza: " + /*Due Date*/ + "</li>" +
+        "<li class='vaxlis' id='lymevax'>Lyme: " + /*Due Date*/ + "</li>" +
+        "</ul>"
+    );
+
+    //Assigning Prevention > HW Info
+    let newHWbrand = $("#doghwbrandname").val();
+    $("#hwprev").html("Heartworm (").append(newHWbrand + "):");
+    //TODO: Add a "moments" thing to make due dates
+
+    //Assigning Prevention > Flea and Tick Info
+    let newFTbrand = $("#dogftbrandname").val();
+    $("#ftprev").html("Flea and Tick (").append(newFTbrand + "):");
+    //TODO: Add a "moments" thing to make due dates
+
+    //Change General Maint. to dog gen maint.
+    $("#maintdiv").html("General Maintenance Due Dates:").append(
+        "<ul>" +
+        "<li class='maintlis' id='hwtmaint'>Heartworm Test: " + /*Due Date*/ + "</li>" +
+        "<li class='maintlis' id='dentalmaint'>Dental Cleaning: " + /*Due Date*/ + "</li>" +
+        "<li class='maintlis' id='tntmaint'>Toenail Trim: " + /*Due Date*/ +  "</li>" +
+        "<li class='maintlis' id='bathmaint'>Bath: " + /*Due Date*/ + "</li>" +
+        "</ul>"
+    );
 });
 
+// Submit CAT stuff
+$("#newcatinfosubmit").click(function () {
+    allPetStuff();
 
+    //Change Vax info to cat vax info
+    $("#vaxdiv").html("Vaccine Due Dates:").append(
+        "<ul>" +
+        "<li class='vaxlis' id='rabiesvax'>Rabies:" + /*Due Date*/ + "</li>" +
+        "<li class='vaxlis' id='fvrcpvax'>FVRCP:" + /*Due Date*/ + "</li>" +
+        "<li class='vaxlis' id='felvvax'>FeLV:" + /*Due Date*/ +  "</li>" +
+        "<li class='vaxlis' id='febordvax'>Bordetella:" + /*Due Date*/ + "</li>" +
+        "</ul>"
+    );
 
-//if newspecies = "dog" when submit clicked
-//SHOW dog options
-//Assigning DOG vaccines
-// Rabies
-// DHPP
-// Leptospirosis
-// Bordetella
-// k9 Influenza
-// Lyme
+    //Assigning Prevention > HW Info
+    let newHWbrand = $("#cathwbrandname").val();
+    $("#hwprev").html("Heartworm (").append(newHWbrand + "):");
+    //TODO: Add a "moments" thing to make due dates
 
-//Assigning DOG FT prevention
-//Brand name
-//Duration of each dose
-//Doses left
-//Last dose given/first dose to be given
+    //Assigning Prevention > Flea and Tick Info
+    let newFTbrand = $("#catftbrandname").val();
+    $("#ftprev").html("Flea and Tick (").append(newFTbrand + "):");
+    //TODO: Add a "moments" thing to make due dates
 
-//Assigning DOG HW prevention
-//Brand name
-//Duration of each dose
-//Doses left
-//Last dose given/first dose to be given
-
-//Assigning DOG general maint.
-//Last HWT?
-//Last nail trim?
-//Last bath?
-
-//if newspecies = "cat" when submit clicked
-//SHOW cat options
-//Assigning CAT vaccines
-//Rabies
-//FVRCP
-//FeLV
-//Bordetella
-
-//Assigning CAT FT prevention
-//Brand name
-//Duration of each dose
-//Doses left
-//Last dose given/first dose to be given
-
-//Assigning CAT HW prevention
-//Brand name
-//Duration of each dose
-//Doses left
-//Last dose given/first dose to be given
-
-//Assigning CAT general maint.
-//Last nail trim?
+    //Change General Maint. to cat gen maint.
+    $("#maintdiv").html("General Maintenance Due Dates:").append(
+        "<ul>" +
+        "<li class='maintlis' id='dentalmaint'>Dental Cleaning: " + /*Due Date*/ + "</li>" +
+        "<li class='maintlis' id='tntmaint'>Toenail Trim: " + /*Due Date*/ +  "</li>" +
+        "</ul>"
+    );
+});
 
