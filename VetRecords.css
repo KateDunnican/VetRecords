@@ -74,3 +74,12 @@ body{
         }
 
     /*General content*/
+        /*Table Stuff*/
+        th{
+            width: 100px;
+            font-weight: normal;
+            border: 1px black solid;
+        }
+        td{
+            border: 1px black solid;
+        }
