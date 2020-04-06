@@ -70,13 +70,14 @@ body{
     /*New Pet content*/
         .infodivs, .newinfodivs, .geninfodivs{
             margin-left: 3%;
+            margin-right: 3%;
             margin-bottom: 2%;
         }
 
     /*General content*/
         /*Table Stuff*/
         th{
-            width: 100px;
+            width: 30%;
             font-weight: normal;
             border: 1px black solid;
         }
