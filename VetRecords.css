@@ -77,7 +77,7 @@ body{
     /*General content*/
         /*Table Stuff*/
         th{
-            width: 30%;
+            /*width: 30%;*/
             font-weight: normal;
             border: 1px black solid;
         }
