@@ -77,10 +77,18 @@ body{
     /*General content*/
         /*Table Stuff*/
         th{
-            /*width: 30%;*/
             font-weight: normal;
             border: 1px black solid;
         }
         td{
             border: 1px black solid;
+        }
+        .brand{
+            width: 20%;
+        }
+        .prevents{
+            width: 77%;
+        }
+        .duration{
+            width: 3%;
         }
