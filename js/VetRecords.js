@@ -1,5 +1,8 @@
 "use strict";
 
+
+$("#testdiv").html("Moment Test - ").append(moment().dayOfYear(365));
+
 $("#dogdiv, #catdiv").hide();
 
 $("#dog").click(function () {
