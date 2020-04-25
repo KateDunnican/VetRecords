@@ -1,7 +1,7 @@
 "use strict";
 
 
-$("#testdiv").html("Moment Test - ").append(moment().dayOfYear(365));
+$("#testdiv").html("Moment Test - ").append("Yo mama" + moment().daysInMonth(2));
 
 $("#dogdiv, #catdiv").hide();
 
