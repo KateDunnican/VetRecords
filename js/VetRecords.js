@@ -1,30 +1,26 @@
 "use strict";
 
+
 // MOMENT TEST
-let adminDate = new Date(1/25/2020);
+let adminDate = new Date("01/25/2020");
 let today = new Date();
-let renewalDay = new Date(adminDate + 1);
-let Difference_In_Time = today.getTime() - renewalDay.getTime();
+let renewalDay = new Date("01/25/2021");
+let Difference_In_Time = today.getTime() - adminDate.getTime();
 let DaysTillVax = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
 
 function getYMD(x){
     let years = Math.floor(x / 365.25);
     let months = Math.floor((x % 365.25)/30.42);
     let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
-    let age = (years + " years, " + months + " months, " + days + " days");
+    let difference = (years + " years, " + months + " months, " + days + " days");
+    return difference;
 }
 
 // let adminDate = moment([2020, 1, 25]);
 // let renewDate = moment([2021, 1, 25]);
 $("#testdiv").html("If Jimbo got his 1yr Rabies on 01/25/2020, he'll need another one in: ").append(
-    // moment([2021, 1, 25]).toNow(true)
-    // renewDate.diff(adminDate, "days") +
-    // " days"
     getYMD(DaysTillVax)
 );
-
-
-
 
 
 
@@ -52,20 +48,20 @@ function allPetStuff (){
     $("#namedivspan").html("").append(newname);
 
     //Assigning age
-    let todaysDate = new Date();
-    let petDOB = new Date($("#dobinput").val());
-    let Difference_In_Time = todaysDate.getTime() - petDOB.getTime();
-    let Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
-
-    function getYMD(x){
-        let years = Math.floor(x / 365.25);
-        let months = Math.floor((x % 365.25)/30.42);
-        let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
-        let age = (years + " years, " + months + " months, " + days + " days");
-        $("#dobdiv").html("Age: ").append(age);
-        console.log(age);
-    }
-    getYMD(Difference_In_Days);
+    // let todaysDate = new Date();
+    // let petDOB = new Date($("#dobinput").val());
+    // let Difference_In_Time = todaysDate.getTime() - petDOB.getTime();
+    // let Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+    //
+    // function getYMD(x){
+    //     let years = Math.floor(x / 365.25);
+    //     let months = Math.floor((x % 365.25)/30.42);
+    //     let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
+    //     let age = (years + " years, " + months + " months, " + days + " days");
+    //     $("#dobdiv").html("Age: ").append(age);
+    //     console.log(age);
+    // }
+    // getYMD(Difference_In_Days);
 
     //Assigning gender
     let newgender = $("input[type=radio][name=gender]:checked").val();
