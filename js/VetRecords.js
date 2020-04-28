@@ -2,25 +2,28 @@
 
 
 // MOMENT TEST
-let adminDate = new Date("01/25/2020");
-let today = new Date();
-let renewalDay = new Date("01/25/2021");
-let Difference_In_Time = today.getTime() - adminDate.getTime();
-let DaysTillVax = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+let LastVaxDate = "01/14/1996";
 
-function getYMD(x){
-    let years = Math.floor(x / 365.25);
-    let months = Math.floor((x % 365.25)/30.42);
-    let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
-    let difference = (years + " years, " + months + " months, " + days + " days");
-    return difference;
+
+function NextVaxOn(x){
+    let today = new Date();
+    let oneYearLater = ((parseInt(LastVaxDate.split("/")[2])) + 1);
+    let Difference_In_Time = today.getTime() - adminDate.getTime();
+    let DaysTillVax = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
+
+    function getYMD(x){
+        let years = Math.floor(x / 365.25);
+        let months = Math.floor((x % 365.25)/30.42);
+        let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
+        let difference = (years + " years, " + months + " months, " + days + " days");
+        return difference;
+    }
+
+    $("#testdiv").html("If Jimbo got his 1yr Rabies on 01/25/2020, he'll need another one in: ").append(
+        getYMD(DaysTillVax)
+    );
 }
 
-// let adminDate = moment([2020, 1, 25]);
-// let renewDate = moment([2021, 1, 25]);
-$("#testdiv").html("If Jimbo got his 1yr Rabies on 01/25/2020, he'll need another one in: ").append(
-    getYMD(DaysTillVax)
-);
 
 
 
