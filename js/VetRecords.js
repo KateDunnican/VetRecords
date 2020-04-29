@@ -1,33 +1,5 @@
 "use strict";
 
-// MOMENT TEST
-let adminDate = new Date(1/25/2020);
-let today = new Date();
-let renewalDay = new Date(adminDate + 1);
-let Difference_In_Time = today.getTime() - renewalDay.getTime();
-let DaysTillVax = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
-
-function getYMD(x){
-    let years = Math.floor(x / 365.25);
-    let months = Math.floor((x % 365.25)/30.42);
-    let days = Math.floor(x - ((years * 365.25) + (months * 30.42)));
-    let age = (years + " years, " + months + " months, " + days + " days");
-}
-
-// let adminDate = moment([2020, 1, 25]);
-// let renewDate = moment([2021, 1, 25]);
-$("#testdiv").html("If Jimbo got his 1yr Rabies on 01/25/2020, he'll need another one in: ").append(
-    // moment([2021, 1, 25]).toNow(true)
-    // renewDate.diff(adminDate, "days") +
-    // " days"
-    getYMD(DaysTillVax)
-);
-
-
-
-
-
-
 $("#dogdiv, #catdiv").hide();
 
 $("#dog").click(function () {
