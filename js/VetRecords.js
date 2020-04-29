@@ -4,7 +4,7 @@
 // MOMENT TEST
 let LastVaxDate = "01/14/1996";
 
-
+//TODO: FINISH THIS -----------------------------------
 function NextVaxOn(x){
     let today = new Date();
     let oneYearLater = ((parseInt(LastVaxDate.split("/")[2])) + 1);
@@ -23,8 +23,6 @@ function NextVaxOn(x){
         getYMD(DaysTillVax)
     );
 }
-
-
 
 
 $("#dogdiv, #catdiv").hide();
