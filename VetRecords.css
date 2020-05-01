@@ -63,7 +63,9 @@ body{
     }
     /*Titles*/
         .titlediv{
+            display: flex;
             justify-content: center;
+            font-weight: bold;
         }
     /*Established Pet content*/
 
