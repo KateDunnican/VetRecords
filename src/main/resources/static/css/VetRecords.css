@@ -1,5 +1,5 @@
 body{
-    background-image: url("images/desk.jpg");
+    background-image: url("IdeaProjects/VetRecords/src/main/resources/static/images/desk.jpg");
 }
 /*Jumbotrons*/
     /*Big Jumbo*/
@@ -15,7 +15,7 @@ body{
     .folderdiv{
         width: 100vw;
         min-height: 100vh;
-        background-image: url("images/asfalt-light.png");
+        background-image: url("IdeaProjects/VetRecords/src/main/resources/static/images/asfalt-light.png");
         background-color: rgba(250, 225, 188, 1);
         border: 1px solid rgba(237, 210, 172, 1);
         padding: 0;
@@ -58,7 +58,7 @@ body{
     .tab-pane{
         margin: 20px;
         background-color: rgba(255, 255, 248, 1);
-        background-image: url("images/asfalt-light.png");
+        background-image: url("IdeaProjects/VetRecords/src/main/resources/static/images/asfalt-light.png");
         min-height: 95vh;
     }
     /*Titles*/
