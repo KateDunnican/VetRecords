@@ -26,9 +26,6 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column (name = "zipcode", nullable = false)
-    private int zipcode;
-
     @Column (name = "phone_number")
     private long phoneNumber;
 
@@ -44,7 +41,7 @@ public class User {
     private List<Dog> dogs;
 
 
-    // Constructors DO YOUR GETTERS AND SETTERS
-
+    // ------------------------- Constructors
+    // ------------------------- Getters and Setters
 
 }
